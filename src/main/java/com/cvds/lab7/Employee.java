@@ -20,7 +20,6 @@ public class Employee {
 	private String role;
 	private Double salary;
 	private LocalDate birthDate;
-	private static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
 	public Employee() {
 
@@ -38,6 +37,7 @@ public class Employee {
 		this.lastName = string2;
 		this.role = string3;
 		this.salary = d;
+		DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		this.birthDate = LocalDate.parse(string4, dateFormat);
 	}
 
